@@ -1,0 +1,217 @@
+:root {
+  --primary-color: #fc6601;
+  --dark-1-color: #1d1b1c;
+  --dark-2-color: #212121;
+  --dark-3-color: #343434;
+  --dark-4-color: #444444;
+  --light-1-color: #f4f4f4;
+  --light-2-color: #ffffff;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --info-color: #3b599a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--dark-1-color);
+  color: var(--light-1-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--light-2-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-dark-1 {
+  color: var(--dark-1-color) !important;
+}
+
+.text-dark-2 {
+  color: var(--dark-2-color) !important;
+}
+
+.text-dark-3 {
+  color: var(--dark-3-color) !important;
+}
+
+.text-light-1 {
+  color: var(--light-1-color) !important;
+}
+
+.text-light-2 {
+  color: var(--light-2-color) !important;
+}
+
+.text-success {
+  color: var(--success-color) !important;
+}
+
+.text-info {
+  color: var(--info-color) !important;
+}
+
+.text-danger {
+  color: var(--danger-color) !important;
+}
+
+.btn-primary,
+.bg-primary,
+.badge-primary,
+.alert-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-light-1,
+.bg-light-1,
+.badge-light-1,
+.alert-light-1 {
+  background: var(--light-1-color);
+  color: #333;
+}
+
+.btn-light-2,
+.bg-light-2,
+.badge-light-2,
+.alert-light-2 {
+  background: var(--light-2-color);
+  color: #333;
+}
+
+.btn-dark-1,
+.bg-dark-1,
+.badge-dark-1,
+.alert-dark-1 {
+  background: var(--dark-1-color);
+  color: #fff;
+}
+
+.btn-dark-2,
+.bg-dark-2,
+.badge-dark-2,
+.alert-dark-2 {
+  background: var(--dark-2-color);
+  color: #fff;
+}
+
+.btn-dark-3,
+.bg-dark-3,
+.badge-dark-3,
+.alert-dark-3 {
+  background: var(--dark-3-color);
+  color: #fff;
+}
+
+.btn-dark-4,
+.bg-dark-4,
+.badge-dark-4,
+.alert-dark-4 {
+  background: var(--dark-4-color);
+  color: #fff;
+}
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+.btn-success,
+.bg-success,
+.badge-success,
+.alert-success {
+  background: var(--success-color);
+  color: #fff;
+}
+
+.btn-info,
+.bg-info,
+.badge-info,
+.alert-info {
+  background: var(--info-color);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-color) !important;
+}
+
+.btn-dark-1:hover {
+  background: var(--dark-1-color) !important;
+}
+
+.btn-dark-2:hover {
+  background: var(--dark-2-color) !important;
+}
+
+.btn-dark-3:hover {
+  background: var(--dark-3-color) !important;
+}
+
+.btn-dark-4:hover {
+  background: var(--dark-4-color) !important;
+}
+
+.btn-light-1:hover {
+  background: var(--light-1-color) !important;
+}
+
+.btn-light-2:hover {
+  background: var(--light-2-color) !important;
+}
+
+.btn-danger:hover {
+  background: var(--danger-color) !important;
+}
+
+.btn-success:hover {
+  background: var(--success-color) !important;
+}
+
+.btn-info:hover {
+  background: var(--info-color) !important;
+}
+
+.btn:hover {
+  opacity: 0.8 !important;
+}
+
+.bg-light,
+.badge-light {
+  border: #ccc solid 1px;
+}
+
+.round-img {
+  border-radius: 50%;
+}
+
+textarea:focus,
+input:focus {
+  outline: none !important;
+}

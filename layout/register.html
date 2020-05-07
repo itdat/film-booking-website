@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./library/jquery-3.5.0.min.js"></script>
+    <title>FilmBooking Website</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Large modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
+        Đăng ký
+      </button>
+
+      <div
+        id="login"
+        class="modal fade"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myLargeModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <div class="modal-header border-bottom-0 justify-content-center align-items-center">
+              <p class="text-center text-primary h4 m-0">Đăng ký</p>
+            </div>
+            <div class="modal-body">
+              <form>
+                <input
+                  class="rounded w-100 border-0 bg-dark-4 p-2 mb-3"
+                  type="text"
+                  name="fullname"
+                  placeholder="Họ và tên"
+                />
+                <input
+                  class="rounded w-100 border-0 bg-dark-4 p-2 mb-3"
+                  type="text"
+                  name="username"
+                  placeholder="Tài khoản"
+                />
+                <input
+                  class="rounded w-100 border-0 bg-dark-4 p-2 mb-3"
+                  type="password"
+                  name="password"
+                  placeholder="Mật khẩu"
+                />
+                <input
+                  class="rounded w-100 border-0 bg-dark-4 p-2 mb-3"
+                  type="password"
+                  name="re-password"
+                  placeholder="Xác nhận lại mật khẩu"
+                />
+                <input
+                  class="rounded w-100 border-0 bg-dark-4 p-2 mb-3"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                />
+                <input
+                  class="rounded w-100 border-0 bg-dark-4 p-2 mb-3"
+                  type="text"
+                  name="phone"
+                  placeholder="Số điện thoại"
+                />
+                <input class="btn btn-block btn-primary border-0" type="submit" value="Đăng ký" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
