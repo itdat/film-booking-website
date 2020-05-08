@@ -19,10 +19,14 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 1rem !important;
   line-height: 1.6;
   background-color: var(--dark-1-color);
   color: var(--light-1-color);
+}
+
+p {
+  margin-bottom: 0;
 }
 
 a {
@@ -200,6 +204,10 @@ img {
 
 .btn:hover {
   opacity: 0.8 !important;
+}
+
+.btn {
+  border: none !important;
 }
 
 .bg-light,

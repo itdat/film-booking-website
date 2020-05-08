@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./library/jquery-3.5.0.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>FilmBooking Website</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Large modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
+        Đặt vé
+      </button>
+
+      <div
+        id="login"
+        class="modal fade"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myLargeModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg" style="width: 90%;">
+          <div class="modal-content">
+            <div class="modal-header border-bottom-0 justify-content-center align-items-center">
+              <p class="text-center text-primary h4 m-0">Đặt vé</p>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-lg-9 order-lg-1">
+                  <p class="text-center">Vui lòng chọn ghế</p>
+                  <div class="bg-dark-4 p-1">
+                    <div class="bg-danger mb-4 text-center rounded">Màn hình</div>
+                    <div class="cinema-seats">
+                      <div class="rows-name">
+                        <div class="row-name d-inline-flex">A</div>
+                        <div class="row-name d-inline-flex">B</div>
+                        <div class="row-name d-inline-flex">C</div>
+                        <div class="row-name d-inline-flex">D</div>
+                        <div class="row-name d-inline-flex">E</div>
+                        <div class="row-name d-inline-flex">F</div>
+                        <div class="row-name d-inline-flex">G</div>
+                        <div class="row-name d-inline-flex">H</div>
+                        <div class="row-name d-inline-flex">I</div>
+                        <div class="row-name d-inline-flex">J</div>
+                        <div class="row-name d-inline-flex">K</div>
+                        <div class="row-name d-inline-flex">L</div>
+                      </div>
+                      <div class="seat-container">
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat">1</div>
+                          <div class="seat">2</div>
+                          <div class="seat">3</div>
+                          <div class="seat">4</div>
+                          <div class="seat">5</div>
+                          <div class="seat">6</div>
+                          <div class="seat">7</div>
+                          <div class="seat">8</div>
+                          <div class="seat">9</div>
+                          <div class="seat booked-seat">10</div>
+                          <div class="seat">11</div>
+                          <div class="seat">12</div>
+                          <div class="seat">13</div>
+                          <div class="seat">14</div>
+                          <div class="seat">15</div>
+                          <div class="seat">16</div>
+                          <div class="seat">17</div>
+                          <div class="seat">18</div>
+                          <div class="seat">19</div>
+                          <div class="seat">20</div>
+                          <div class="seat">21</div>
+                          <div class="seat">22</div>
+                          <div class="seat">23</div>
+                        </div>
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat">1</div>
+                          <div class="seat">2</div>
+                          <div class="seat">3</div>
+                          <div class="seat">4</div>
+                          <div class="seat">5</div>
+                          <div class="seat">6</div>
+                          <div class="seat">7</div>
+                          <div class="seat">8</div>
+                          <div class="seat booked-seat">9</div>
+                          <div class="seat booked-seat">10</div>
+                          <div class="seat booked-seat">11</div>
+                          <div class="seat booked-seat">12</div>
+                          <div class="seat booked-seat">13</div>
+                          <div class="seat booked-seat">14</div>
+                          <div class="seat booked-seat">15</div>
+                          <div class="seat booked-seat">16</div>
+                          <div class="seat booked-seat">17</div>
+                          <div class="seat booked-seat">18</div>
+                          <div class="seat booked-seat">19</div>
+                          <div class="seat booked-seat">20</div>
+                          <div class="seat booked-seat">21</div>
+                          <div class="seat booked-seat">22</div>
+                          <div class="seat booked-seat">23</div>
+                        </div>
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat booked-seat">1</div>
+                          <div class="seat booked-seat">2</div>
+                          <div class="seat booked-seat">3</div>
+                          <div class="seat booked-seat">4</div>
+                          <div class="seat booked-seat">5</div>
+                          <div class="seat booked-seat">6</div>
+                          <div class="seat booked-seat">7</div>
+                          <div class="seat booked-seat">8</div>
+                          <div class="seat booked-seat">9</div>
+                          <div class="seat booked-seat">10</div>
+                          <div class="seat booked-seat">11</div>
+                          <div class="seat booked-seat">12</div>
+                          <div class="seat">13</div>
+                          <div class="seat">14</div>
+                          <div class="seat">15</div>
+                          <div class="seat">16</div>
+                          <div class="seat">17</div>
+                          <div class="seat">18</div>
+                          <div class="seat">19</div>
+                          <div class="seat">20</div>
+                          <div class="seat">21</div>
+                          <div class="seat">22</div>
+                          <div class="seat">23</div>
+                        </div>
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat">1</div>
+                          <div class="seat">2</div>
+                          <div class="seat">3</div>
+                          <div class="seat">4</div>
+                          <div class="seat booked-seat">5</div>
+                          <div class="seat booked-seat">6</div>
+                          <div class="seat booked-seat">7</div>
+                          <div class="seat booked-seat">8</div>
+                          <div class="seat booked-seat">9</div>
+                          <div class="seat booked-seat">10</div>
+                          <div class="seat booked-seat">11</div>
+                          <div class="seat booked-seat">12</div>
+                          <div class="seat booked-seat">13</div>
+                          <div class="seat booked-seat">14</div>
+                          <div class="seat booked-seat">15</div>
+                          <div class="seat booked-seat">16</div>
+                          <div class="seat booked-seat">17</div>
+                          <div class="seat booked-seat">18</div>
+                          <div class="seat booked-seat">19</div>
+                          <div class="seat booked-seat">20</div>
+                          <div class="seat booked-seat">21</div>
+                          <div class="seat booked-seat">22</div>
+                          <div class="seat">23</div>
+                        </div>
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat">1</div>
+                          <div class="seat">2</div>
+                          <div class="seat">3</div>
+                          <div class="seat">4</div>
+                          <div class="seat">5</div>
+                          <div class="seat">6</div>
+                          <div class="seat chosen-seat">7</div>
+                          <div class="seat chosen-seat">8</div>
+                          <div class="seat chosen-seat">9</div>
+                          <div class="seat chosen-seat">10</div>
+                          <div class="seat">11</div>
+                          <div class="seat">12</div>
+                          <div class="seat">13</div>
+                          <div class="seat">14</div>
+                          <div class="seat">15</div>
+                          <div class="seat">16</div>
+                          <div class="seat">17</div>
+                          <div class="seat">18</div>
+                          <div class="seat">19</div>
+                          <div class="seat">20</div>
+                          <div class="seat">21</div>
+                          <div class="seat">22</div>
+                          <div class="seat">23</div>
+                        </div>
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat vip-seat">1</div>
+                          <div class="seat vip-seat">2</div>
+                          <div class="seat vip-seat">3</div>
+                          <div class="seat vip-seat">4</div>
+                          <div class="seat vip-seat">5</div>
+                          <div class="seat vip-seat">6</div>
+                          <div class="seat vip-seat">7</div>
+                          <div class="seat vip-seat">8</div>
+                          <div class="seat vip-seat">9</div>
+                          <div class="seat vip-seat">10</div>
+                          <div class="seat vip-seat">11</div>
+                          <div class="seat vip-seat">12</div>
+                          <div class="seat vip-seat">13</div>
+                          <div class="seat vip-seat">14</div>
+                          <div class="seat vip-seat">15</div>
+                          <div class="seat vip-seat">16</div>
+                          <div class="seat vip-seat">17</div>
+                          <div class="seat vip-seat">18</div>
+                          <div class="seat vip-seat">19</div>
+                          <div class="seat vip-seat">20</div>
+                          <div class="seat vip-seat">21</div>
+                          <div class="seat vip-seat">22</div>
+                          <div class="seat vip-seat">23</div>
+                        </div>
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat vip-seat">1</div>
+                          <div class="seat vip-seat">2</div>
+                          <div class="seat vip-seat">3</div>
+                          <div class="seat vip-seat">4</div>
+                          <div class="seat vip-seat">5</div>
+                          <div class="seat vip-seat">6</div>
+                          <div class="seat vip-seat">7</div>
+                          <div class="seat vip-seat">8</div>
+                          <div class="seat vip-seat">9</div>
+                          <div class="seat vip-seat booked-seat">10</div>
+                          <div class="seat vip-seat booked-seat">11</div>
+                          <div class="seat vip-seat booked-seat">12</div>
+                          <div class="seat vip-seat booked-seat">13</div>
+                          <div class="seat vip-seat booked-seat">14</div>
+                          <div class="seat vip-seat booked-seat">15</div>
+                          <div class="seat vip-seat booked-seat">16</div>
+                          <div class="seat vip-seat booked-seat">17</div>
+                          <div class="seat vip-seat booked-seat">18</div>
+                          <div class="seat vip-seat booked-seat">19</div>
+                          <div class="seat vip-seat booked-seat">20</div>
+                          <div class="seat vip-seat booked-seat">21</div>
+                          <div class="seat vip-seat booked-seat">22</div>
+                          <div class="seat vip-seat booked-seat">23</div>
+                        </div>
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat vip-seat booked-seat">1</div>
+                          <div class="seat vip-seat booked-seat">2</div>
+                          <div class="seat vip-seat booked-seat">3</div>
+                          <div class="seat vip-seat booked-seat">4</div>
+                          <div class="seat vip-seat booked-seat">5</div>
+                          <div class="seat vip-seat booked-seat">6</div>
+                          <div class="seat vip-seat booked-seat">7</div>
+                          <div class="seat vip-seat booked-seat">8</div>
+                          <div class="seat vip-seat booked-seat">9</div>
+                          <div class="seat vip-seat booked-seat">10</div>
+                          <div class="seat vip-seat booked-seat">11</div>
+                          <div class="seat vip-seat booked-seat">12</div>
+                          <div class="seat vip-seat booked-seat">13</div>
+                          <div class="seat vip-seat booked-seat">14</div>
+                          <div class="seat vip-seat booked-seat">15</div>
+                          <div class="seat vip-seat booked-seat">16</div>
+                          <div class="seat vip-seat booked-seat">17</div>
+                          <div class="seat vip-seat booked-seat">18</div>
+                          <div class="seat vip-seat booked-seat">19</div>
+                          <div class="seat vip-seat booked-seat">20</div>
+                          <div class="seat vip-seat booked-seat">21</div>
+                          <div class="seat vip-seat booked-seat">22</div>
+                          <div class="seat vip-seat booked-seat">23</div>
+                        </div>
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat vip-seat booked-seat">1</div>
+                          <div class="seat vip-seat booked-seat">2</div>
+                          <div class="seat vip-seat booked-seat">3</div>
+                          <div class="seat vip-seat booked-seat">4</div>
+                          <div class="seat vip-seat booked-seat">5</div>
+                          <div class="seat vip-seat booked-seat">6</div>
+                          <div class="seat vip-seat booked-seat">7</div>
+                          <div class="seat vip-seat booked-seat">8</div>
+                          <div class="seat vip-seat booked-seat">9</div>
+                          <div class="seat vip-seat booked-seat">10</div>
+                          <div class="seat vip-seat booked-seat">11</div>
+                          <div class="seat vip-seat booked-seat">12</div>
+                          <div class="seat vip-seat booked-seat">13</div>
+                          <div class="seat vip-seat booked-seat">14</div>
+                          <div class="seat vip-seat booked-seat">15</div>
+                          <div class="seat vip-seat booked-seat">16</div>
+                          <div class="seat vip-seat booked-seat">17</div>
+                          <div class="seat vip-seat booked-seat">18</div>
+                          <div class="seat vip-seat booked-seat">19</div>
+                          <div class="seat vip-seat booked-seat">20</div>
+                          <div class="seat vip-seat">21</div>
+                          <div class="seat vip-seat">22</div>
+                          <div class="seat vip-seat">23</div>
+                        </div>
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat vip-seat">1</div>
+                          <div class="seat vip-seat">2</div>
+                          <div class="seat vip-seat">3</div>
+                          <div class="seat vip-seat">4</div>
+                          <div class="seat vip-seat">5</div>
+                          <div class="seat vip-seat">6</div>
+                          <div class="seat vip-seat">7</div>
+                          <div class="seat vip-seat">8</div>
+                          <div class="seat vip-seat">9</div>
+                          <div class="seat vip-seat">10</div>
+                          <div class="seat vip-seat">11</div>
+                          <div class="seat vip-seat">12</div>
+                          <div class="seat vip-seat">13</div>
+                          <div class="seat vip-seat">14</div>
+                          <div class="seat vip-seat">15</div>
+                          <div class="seat vip-seat">16</div>
+                          <div class="seat vip-seat">17</div>
+                          <div class="seat vip-seat">18</div>
+                          <div class="seat vip-seat">19</div>
+                          <div class="seat vip-seat">20</div>
+                          <div class="seat vip-seat">21</div>
+                          <div class="seat vip-seat">22</div>
+                          <div class="seat vip-seat">23</div>
+                        </div>
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat vip-seat">1</div>
+                          <div class="seat vip-seat">2</div>
+                          <div class="seat vip-seat">3</div>
+                          <div class="seat vip-seat">4</div>
+                          <div class="seat vip-seat">5</div>
+                          <div class="seat vip-seat">6</div>
+                          <div class="seat vip-seat">7</div>
+                          <div class="seat vip-seat">8</div>
+                          <div class="seat vip-seat">9</div>
+                          <div class="seat vip-seat">10</div>
+                          <div class="seat vip-seat">11</div>
+                          <div class="seat vip-seat">12</div>
+                          <div class="seat vip-seat">13</div>
+                          <div class="seat vip-seat">14</div>
+                          <div class="seat vip-seat">15</div>
+                          <div class="seat vip-seat">16</div>
+                          <div class="seat vip-seat">17</div>
+                          <div class="seat vip-seat">18</div>
+                          <div class="seat vip-seat">19</div>
+                          <div class="seat vip-seat">20</div>
+                          <div class="seat vip-seat">21</div>
+                          <div class="seat vip-seat">22</div>
+                          <div class="seat vip-seat">23</div>
+                        </div>
+                        <div class="d-inline-flex justify-content-start">
+                          <div class="seat sweet-box">1</div>
+                          <div class="seat sweet-box">2</div>
+                          <div class="seat sweet-box">3</div>
+                          <div class="seat sweet-box">4</div>
+                          <div class="seat sweet-box">5</div>
+                          <div class="seat sweet-box">6</div>
+                          <div class="seat sweet-box">7</div>
+                          <div class="seat sweet-box">8</div>
+                          <div class="seat sweet-box">9</div>
+                          <div class="seat sweet-box">10</div>
+                          <div class="seat sweet-box">11</div>
+                          <div class="seat sweet-box">12</div>
+                          <div class="seat sweet-box">13</div>
+                          <div class="seat sweet-box">14</div>
+                          <div class="seat sweet-box">15</div>
+                          <div class="seat sweet-box">16</div>
+                          <div class="seat sweet-box">17</div>
+                          <div class="seat sweet-box">18</div>
+                          <div class="seat sweet-box">19</div>
+                          <div class="seat sweet-box">20</div>
+                          <div class="seat sweet-box">21</div>
+                          <div class="seat sweet-box">22</div>
+                          <div class="seat sweet-box">23</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-sm-3">
+                      <div class="seat mx-auto"></div>
+                      <p class="text-center">Ghế thường</p>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="seat booked-seat mx-auto"></div>
+                      <p class="text-center">Đã được đặt</p>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="seat vip-seat mx-auto"></div>
+                      <p class="text-center">Ghế VIP</p>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="seat sweet-box mx-auto"></div>
+                      <p class="text-center">Sweet box</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 text-center pr-lg-0 order-lg-0">
+                  <div class="ticket">
+                    <div class="ticket-container">
+                      <img class="ticket-cinema-icon" src="./images/cinema-camera.svg" alt="" />
+                      <div class="ticket-title">
+                        <h5 class="mb-0">VÉ XEM PHIM</h5>
+                        <div class="ticket-stars">
+                          <img src="./images/star.svg" alt="" />
+                          <img src="./images/star.svg" alt="" />
+                          <img src="./images/star.svg" alt="" />
+                          <img src="./images/star.svg" alt="" />
+                          <img src="./images/star.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="ticket-content">
+                        <h6 class="mt-2 font-weight-bold">BLOODSHOT</h6>
+                        <p>
+                          Rạp: CGV Pearl Plaza
+                        </p>
+                        <p>
+                          Ngày: 13/10/2020
+                        </p>
+                        <p>
+                          Giờ: 9:00 PM
+                        </p>
+                        <p>
+                          Phòng: 5
+                        </p>
+                        <p>
+                          Ghế: E7, E8, E9, E10
+                        </p>
+                      </div>
+                      <div class="ticket-price">
+                        <h4 class="mb-0">150.000 VNĐ</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-block btn-primary">Thanh toán</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
