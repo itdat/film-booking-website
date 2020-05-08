@@ -756,3 +756,15 @@ a.signin:hover {
    align-items: center;
   }
 }
+
+@media (max-width:357px){
+  .home-title a{
+      font-size: 0.8rem;
+  }
+}
+
+@media (max-width:321px){
+  .home-title a{
+      font-size: 0.7rem;
+  }
+}
