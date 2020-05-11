@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>movie-booking</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+  <!-- Fontawnsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./css/homepage.css">
+  <link rel="stylesheet" href="./css/booking-process.css">
+
+  <script
+      src="https://kit.fontawesome.com/5ebd2fc909.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+
+<body>
+
+  <!--Log in-->
+  
+  <div
+  id="login"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0 justify-content-center align-items-center">
+        <p class="text-center text-primary h4 m-0">Đăng nhập</p>
+      </div>
+      <div class="modal-body">
+        <form>
+          <input
+            class="rounded w-100 border-0 bg-dark-4 p-2 mb-3"
+            type="text"
+            name="username"
+            placeholder="Tài khoản"
+          />
+          <input
+            class="rounded w-100 border-0 bg-dark-4 p-2 mb-3"
+            type="password"
+            name="password"
+            placeholder="Mật khẩu"
+          />
+          <div class="text-center">
+            <input type="checkbox" name="remember-account" id="remember-account" />
+            <label for="remember-account">Nhớ tài khoản</label>
+          </div>
+          <input class="btn btn-block btn-primary border-0" type="submit" value="Đăng nhập" />
+        </form>
+        <p class="text-center my-3">Chưa có tài khoản? <a href="#">Đăng ký</a> hoặc</p>
+        <a class="btn btn-block btn-danger border-0 text-center">Đăng nhập bằng Google</a>
+        <a class="btn btn-block btn-info border-0 text-center">Đăng nhập bằng Facebook</a>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Header -->
+  <header class="container-fuild" id="header">
+    <nav class="navbar navbar-expand-md">
+
+      <!-- Header logo -->
+      <a href="#" class="navbar-brand">
+        <img src="./images/logo-dark-mode.png" alt="logo-web">
+      </a>
+      <!-- End Header logo -->
+
+      <!-- Header button toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <span class="toggle-icon"></span>
+      </button>
+      <!-- End header button toggler -->
+
+      <!-- Navigation bar -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Lịch chiếu</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Cụm rạp</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Tin tức
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Sự kiện nổi bật</a>
+              <a class="dropdown-item" href="#">Review</a>
+              <a class="dropdown-item" href="#">Khuyến mãi</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Tuyển dụng</a>
+          </li>
+        </ul>
+
+        <!-- Sign in -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="signin nav-link">
+              <i class="fa fa-user mr-2"></i>
+              <!-- <p data-toggle="modal" data-target="#login">Đăng nhập</p> -->
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
+                Đăng nhập
+              </button>
+            </a>
+          </li>
+        </ul>
+        <!-- End Sign in -->
+
+      </div>
+    </nav>
+  </header>
+  <!-- End header -->
+
+  <div id="body">
+    <!-- Booking steps -->
+    <section class="booking-steps bg-dark-4">
+        <div class="booking-step">
+          <p class="text-center"><i class="fas fa-th-large"></i></p>
+          <p>Chọn ghế</p>
+        </div>
+        <div class="booking-step text-primary">
+          <p class="text-center"><i class="fas fa-shopping-bag"></i></p>
+          <p>Bắp nước</p>
+        </div>
+        <div class="booking-step">
+          <p class="text-center"><i class="far fa-credit-card"></i></p>
+          <p>Thanh toán</p>
+        </div>
+        <div class="booking-step">
+          <p class="text-center"><i class="fas fa-receipt"></i></p>
+          <p>Thông tin</p>
+        </div>
+    </section>
+
+    <!-- Checkout -->
+    <section id="checkout" class="container">
+      <div class="row">
+        
+        <div class="col-md-9 bg-dark-3 p-3 order-md-1 border-left border-dark-4">
+          <h5 class="text-center mt-2 mb-4 text-primary">Thông tin thanh toán</h5>
+          <div class="accordion" id="list-combo">
+            <div class="card bg-dark-3 z-depth-0 bordered">
+              <div class="card-header" id="headingOne2">
+                <h5 class="mb-0">
+                  <button class="btn text-white" type="button" data-toggle="collapse" data-target="#collapseOne2"
+                    aria-expanded="true" aria-controls="collapseOne2">
+                    Bắp rang
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2"
+                data-parent="#list-combo">
+                <div class="card-body">
+                  <table class="table table-dark">
+                    <tbody>
+                      <tr>
+                        <td class="combo-preview">
+                          <div class="row align-items-center">
+                            <div class="col-lg-4">
+                              <img class="rounded mr-3" src="./images/combo.jpg" alt="Generic placeholder image">
+                            </div>
+                            <div class="col-lg-8">
+                              <h5 class="mt-md-3">Bắp rang 60oz</h5>
+                              <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>40,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="combo-preview">
+                          <div class="row align-items-center">
+                            <div class="col-lg-4">
+                              <img class="rounded mr-3" src="./images/combo.jpg" alt="Generic placeholder image">
+                            </div>
+                            <div class="col-lg-8">
+                              <h5 class="mt-md-3">Bắp rang 60oz</h5>
+                              <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td class="combo-preview">
+                          <div class="row align-items-center">
+                            <div class="col-lg-4">
+                              <img class="rounded mr-3" src="./images/combo.jpg" alt="Generic placeholder image">
+                            </div>
+                            <div class="col-lg-8">
+                              <h5 class="mt-md-3">Bắp rang 60oz</h5>
+                              <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-dark-3 z-depth-0 bordered">
+              <div class="card-header" id="headingTwo2">
+                <h5 class="mb-0">
+                  <button class="btn text-white collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                    Beer
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2"
+                data-parent="#list-combo">
+                <div class="card-body">
+                  <table class="table table-dark">
+                    <tbody>
+                      <tr>
+                        <td>Bắp rang 60oz</td>
+                        <td>40,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>Bắp nấm 60oz - Caramel</td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>Bắp rang 60oz- Phô Mai</td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-dark-3 z-depth-0 bordered">
+              <div class="card-header" id="headingThree2">
+                <h5 class="mb-0">
+                  <button class="btn text-white collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                    Combo Beer
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2"
+                data-parent="#list-combo">
+                <div class="card-body">
+                  <table class="table table-dark">
+                    <tbody>
+                      <tr>
+                        <td>Bắp rang 60oz</td>
+                        <td>40,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>Bắp nấm 60oz - Caramel</td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>Bắp rang 60oz- Phô Mai</td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-dark-3 z-depth-0 bordered">
+              <div class="card-header" id="headingThree2">
+                <h5 class="mb-0">
+                  <button class="btn text-white collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                    Combo Beer
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2"
+                data-parent="#list-combo">
+                <div class="card-body">
+                  <table class="table table-dark">
+                    <tbody>
+                      <tr>
+                        <td>Bắp rang 60oz</td>
+                        <td>40,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>Bắp nấm 60oz - Caramel</td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>Bắp rang 60oz- Phô Mai</td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-dark-3 z-depth-0 bordered">
+              <div class="card-header" id="headingThree2">
+                <h5 class="mb-0">
+                  <button class="btn text-white collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                    Combo Beer
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2"
+                data-parent="#list-combo">
+                <div class="card-body">
+                  <table class="table table-dark">
+                    <tbody>
+                      <tr>
+                        <td>Bắp rang 60oz</td>
+                        <td>40,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>Bắp nấm 60oz - Caramel</td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>Bắp rang 60oz- Phô Mai</td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-dark-3 z-depth-0 bordered">
+              <div class="card-header" id="headingThree2">
+                <h5 class="mb-0">
+                  <button class="btn text-white collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                    Combo Beer
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2"
+                data-parent="#list-combo">
+                <div class="card-body">
+                  <table class="table table-dark">
+                    <tbody>
+                      <tr>
+                        <td>Bắp rang 60oz</td>
+                        <td>40,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>Bắp nấm 60oz - Caramel</td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>Bắp rang 60oz- Phô Mai</td>
+                        <td>45,000 đ</td>
+                        <td>
+                          <a href="#" class="btn btn-dark-2 btn-control">-</a>
+                          <input class="rounded input-quantity" type="number" name="quantity" value="0" readonly>
+                          <a href="#" class="btn btn-dark-2 btn-control">+</a>
+                      </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 bg-dark-3 p-3 order-md-0">
+          <div class="scroll-area tickets-scroll">
+            <div class="ticket">
+              <div class="ticket-container">
+                <img class="ticket-cinema-icon" src="./images/cinema-camera.svg" alt="" />
+                <div class="ticket-title">
+                  <h5 class="mb-0">VÉ XEM PHIM</h5>
+                  <div class="ticket-stars">
+                    <img src="./images/star.svg" alt="" />
+                    <img src="./images/star.svg" alt="" />
+                    <img src="./images/star.svg" alt="" />
+                    <img src="./images/star.svg" alt="" />
+                    <img src="./images/star.svg" alt="" />
+                  </div>
+                </div>
+                <div class="ticket-content">
+                  <h6 class="mt-2 font-weight-bold">BLOODSHOT</h6>
+                  <p>
+                    Rạp: CGV Pearl Plaza
+                  </p>
+                  <p>
+                    Ngày: 13/10/2020
+                  </p>
+                  <p>
+                    Giờ: 9:00 PM
+                  </p>
+                  <p>
+                    Phòng: 5
+                  </p>
+                  <p>
+                    Ghế: E7, E8, E9, E10
+                  </p>
+                </div>
+                <div class="ticket-price">
+                  <h4 class="mb-0">150.000 VNĐ</h4>
+                </div>
+              </div>
+            </div>
+            <div class="ticket">
+              <div class="ticket-container">
+                <img class="ticket-cinema-icon" src="./images/popcorn.svg" alt="" />
+                <div class="ticket-title">
+                  <h5 class="mb-0">COMBO MUA KÈM</h5>
+                  <div class="ticket-stars">
+                    <img src="./images/star.svg" alt="" />
+                    <img src="./images/star.svg" alt="" />
+                    <img src="./images/star.svg" alt="" />
+                    <img src="./images/star.svg" alt="" />
+                    <img src="./images/star.svg" alt="" />
+                  </div>
+                </div>
+                <div class="ticket-content">
+                  <h6 class="mt-2 font-weight-bold">MY SNACK COMBO 2020 (ONLINE)</h6>
+                  <p>
+                    1 bắp vừa 32oz
+                  </p>
+                  <p>
+                    1 nước ngọt siêu lớn 32oz
+                  </p>
+                  <p>
+                    1 gói snack trực tuyến
+                  </p>
+    
+                  <h6 class="mt-2 font-weight-bold">MY SNACK COMBO 2020 (ONLINE)</h6>
+                  <p>
+                    1 bắp vừa 32oz
+                  </p>
+                  <p>
+                    1 nước ngọt siêu lớn 32oz
+                  </p>
+                  <p>
+                    1 gói snack trực tuyến
+                  </p>
+                </div>
+                <div class="ticket-price">
+                  <h4 class="mb-0">200.000 VNĐ</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-5 p-1 text-center">
+            <h5>Tổng cộng: 150.000 VNĐ</h5>
+            <button class="btn btn-block btn-primary">Tiếp tục</button>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer container-fuild">
+    <div class="container">
+
+      <!-- Footer top -->
+      <div class="footer-top">
+        <div class="row footer-top-line">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 footer-top__secure">
+            <div class="footer-top__item">
+              <p class="footer-top__item-title">TIX</p>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Brand Guidelines</a></li>
+                <li><a href="#">Thõa thuận sử dụng</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 footer-top__partner">
+            <div class="footer-top__item">
+              <p class="footer-top__item-title">ĐỐI TÁC</p>
+            <div class="partner-content">
+              <div class="row partner">
+                <div class="partner__item">
+                  <a href="#"><img src="./images/logo-dark-mode.png" alt=""></a>
+                </div>
+                <div class="partner__item">
+                  <a href="#"><img src="./images/cgvLogo.png" alt=""></a>
+                </div>
+                <div class="partner__item">
+                  <a href="#"><img src="./images/bhdLogo.png" alt=""></a>
+                </div>
+                <div class="partner__item">
+                  <a href="#"><img src="./images/lottleLogo.png" alt=""></a>
+                </div>
+              </div>
+              <div class="row partner">
+                <div class="partner__item">
+                  <a href="#"><img src="./images/footer6.png" alt=""></a>
+                </div>
+                <div class="partner__item">
+                  <a href="#"><img src="./images/footer4.png" alt=""></a>
+                </div>
+                <div class="partner__item">
+                  <a href="#"><img src="./images/footer2.png" alt=""></a>
+                </div>
+                <div class="partner__item">
+                  <a href="#"><img src="./images/lottleLogo.png" alt=""></a>
+                </div>
+              </div>
+              <div class="row partner">
+                <div class="partner__item">
+                  <a href="#"><img src="./images/lottleLogo.png" alt=""></a>
+                </div>
+                <div class="partner__item">
+                  <a href="#"><img src="./images/foot1.jpg" alt=""></a>
+                </div>
+                <div class="partner__item">
+                  <a href="#"><img src="./images/footer4.png" alt=""></a>
+                </div>
+                <div class="partner__item">
+                  <a href="#"><img src="./images/foot1.jpg" alt=""></a>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 contact">
+            <p class="footer-top__item-title">LIÊN HỆ</p>
+            <div class="contact-content">
+              <div class="row partner">
+                <div class="contact__item">
+                  <a href="#"><img src="./images/facebook-logo.png" alt=""></a>
+                </div>
+                <div class="contact__item">
+                  <a href="#"><img src="./images/zalopay_icon.png" alt=""></a>
+                </div>
+                <div class="contact__item">
+                  <a href="#"><img src="./images/cybersoft.png" alt=""></a>
+                </div>
+                <div class="contact__item">
+                  <a href="#"><img src="./images/lottleLogo.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-3 services">
+            <p class="footer-top__item-title">CHĂM SÓC KHÁCH HÀNG</p>
+            <ul>
+              <li>Hotline: 113</li>
+              <li>Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày bao gồm cả Lễ Tết)</li>
+              <li>Email hỗ trợ: hoidap@tix.vn</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End footer top -->
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <div class="row">
+          <div class="col-12 col-md-4 ">
+            <img src="./images/zion-logo.jpg" alt="">
+          </div>
+          <div class="col-12 col-md-4 ">
+            <p class="footer-bottom-title text-white">TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</p>
+            <p>Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt Nam.</p>
+            <p>Giấy chứng nhận đăng ký kinh doanh số: 0101659783,đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020
+              do Sở kế hoạch và đầu tư Thành phố Hồ Chí Minh cấp.</p>
+            <p>Số Điện Thoại (Hotline): 1900 545 436</p>
+            <p>Email: <a href="#">support@tix.vn</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+            <img src="./images/license.png" alt="lisence">
+          </div>
+        </div>
+      </div>
+      <!-- End footer bottom -->
+  </footer>
+  <!-- End footer -->
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

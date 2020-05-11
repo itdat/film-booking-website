@@ -1,0 +1,350 @@
+#body {
+  margin-top: 74px;
+}
+
+#app {
+  background: var(--dark-1-color);
+  width: 100vw;
+  height: 100vh;
+}
+
+.seat {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0.1rem;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background: silver;
+  color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+}
+
+.seat:hover {
+  position: relative;
+  color: var(--dark-1-color);
+}
+
+.seat:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: inherit;
+}
+
+.vip-seat {
+  position: relative;
+}
+
+.vip-seat::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: url(../images/crowns.svg);
+  z-index: 100;
+}
+
+.booked-seat {
+  background: slategray;
+}
+
+.chosen-seat {
+  background: var(--success-color);
+}
+
+.sweet-box {
+  position: relative;
+}
+
+.sweet-box::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: url(../images/heart.svg) center center no-repeat;
+  z-index: 100;
+}
+
+.seat-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.seat-container::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+  background-color: #f5f5f5;
+}
+
+.seat-container::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+.cinema-seats {
+  display: flex;
+}
+
+.seat-container {
+  overflow-x: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.row-name {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0.1rem;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket {
+  position: relative;
+  background: #d9c4b1;
+  color: #323335;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  padding-top: 1.4rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (max-width: 990px) {
+  .ticket {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticket {
+    padding-bottom: 1.4rem;
+  }
+}
+
+.ticket::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: url("../images/ticket-top.svg") no-repeat;
+  background-size: 101% auto;
+}
+
+.ticket::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background: url("../images/ticket-bottom.svg") no-repeat;
+  background-size: 101% auto;
+}
+
+.ticket-container {
+  border: 2px solid #323335;
+  border-radius: 10px;
+  padding: 0.5rem 0;
+}
+
+img.ticket-cinema-icon {
+  width: 20%;
+}
+
+.ticket-title {
+  background: #323335;
+  color: #d9c4b1;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.ticket-stars img {
+  width: 0.5rem;
+}
+
+.ticket-content {
+  padding: 0.3rem;
+  font-weight: bold;
+  word-spacing: -0.2rem;
+}
+
+.ticket-price {
+  padding-top: 0.5rem;
+  border-top: 2px solid #323335;
+}
+
+.ticket-barcode {
+  padding: 0.5rem 2rem;
+  border-top: 2px solid #323335;
+}
+
+.booking-steps {
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem;
+}
+
+.booking-step:last-child::before {
+  display: none;
+}
+
+.booking-step:last-child::after {
+  display: none;
+}
+
+.booking-step {
+  position: relative;
+  text-align: center;
+  margin-right: 2.6rem;
+}
+
+.booking-step:last-child {
+  margin-right: 0;
+}
+
+.booking-step:hover {
+  cursor: default;
+  color: var(--primary-color);
+  transition-duration: 500ms;
+}
+
+.booking-step::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: -2rem;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 20px solid var(--light-2-color);
+  border-bottom: 20px solid transparent;
+}
+
+.booking-step::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: -1.75rem;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 20px solid var(--dark-4-color);
+  border-bottom: 20px solid transparent;
+  z-index: 1;
+}
+
+.card-header {
+  padding: 0.25rem !important;
+}
+
+.card-body {
+  padding: 0.25rem !important;
+}
+
+.btn-control {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50% !important;
+  text-align: center;
+  border: 1px solid var(--dark-4-color) !important;
+  line-height: initial;
+}
+
+.input-quantity {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  border: none;
+  text-align: center;
+  background: inherit;
+  color: var(--light-1-color);
+}
+
+.tickets-scroll {
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.combo-preview {
+  width: 60%;
+}
+
+.combo-img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  display: block;
+  padding: 0.2rem 1rem;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+label img {
+  width: 40px;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+input[type="radio"]:hover + label {
+  border: 1px solid var(--primary-color);
+}
+
+input[type="radio"]:focus + label {
+  border: 1px solid var(--primary-color);
+}
+
+input[type="radio"]:checked + label {
+  background: var(--dark-3-color);
+  color: var(--light-1-color);
+}
+
+input[type="radio"] + label i {
+  visibility: hidden;
+  margin-right: 0.5rem;
+}
+
+input[type="radio"]:checked + label i {
+  visibility: visible;
+  color: var(--success-color);
+}
+
+table th {
+  border-bottom: 1px !important;
+}
+
+.form-control:focus {
+  background: initial;
+}
+
+.ticket-info-container {
+  width: 300px;
+}
