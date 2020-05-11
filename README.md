@@ -8,6 +8,10 @@ This is a project about booking movie ticket. It focuses on building the front-e
 
 ### About my team
 
+<p align="center">
+<img width="200px" src="./logo/dark-mode-demo.png" alt="hdh-logo"/>
+</p>
+
 There are 3 members in our team:
 
   - Trinh Vu Minh Hung
