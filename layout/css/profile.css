@@ -1,3 +1,6 @@
+.profile{
+    margin-top: 74px;
+}
 .form-item{
     display: flex;
     align-items: center;
@@ -9,18 +12,19 @@
 .input-label{
     width: 110px;
     min-width: 110px;
-    color:#949494;
+    color:var(--light-2-color);
 }
 
 .profile__detail .profile__detail-title{
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
 }
-
+.profile__detail__infor{
+    margin-bottom: 2rem;
+}
 .profile__detail form{
     padding: 10px;
-    background-color: black;
+    background-color: var(--dark-2-color);
     border-radius:10px;
 }
 
@@ -35,13 +39,11 @@
     width: 100%;
     bottom:-10px;
     left: 0;
-    background-color: #949494;
+    background-color: var(--primary-color);
 }
 
 .profile__controller ul{
-    
     background-color: var(--dark-2-color);
-    height: 100vh;
 }
 .profile__controller-user{
     background-color: var(--dark-3-color);
@@ -67,18 +69,25 @@
 }
 .profile__controller ul li{
     padding: 1rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .profile__controller ul li:hover{
     background-color: var(--dark-4-color);
 }
 
-.profile__controller ul li:hover i{
+.profile__controller ul li:hover a i{
     color:var(--primary-color);
     background-color: var(--light-1-color);
-    transition: all .5s;
+    transition: all .4s;
 }
-.profile__controller ul li i{
+.profile__controller ul li:hover i{
+    color: var(--primary-color);
+    transition: all .4s;
+}
+.profile__controller ul li a i{
     display: inline-block;
     height: 30px;
     width: 30px;
@@ -90,10 +99,49 @@
     margin-right: 1.5rem;
 }
 
+
 .profile__user-title p{
     font-weight: 300;
 }
 
 .profile__user-title strong{
     color: var(--primary-color);
+}
+.profile__detail__link ul{
+    background-color:var(--dark-2-color);
+    border-radius: 10px;
+    padding: 10px;
+}
+.profile__detail__link ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+}
+.profile__detail__link ul li a:first-child{
+    text-decoration: none;
+    color: var(--light-1-color);
+}
+
+.profile__detail__link ul img{
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+.profile__detail__link ul li::after{
+    background-color: #949494;
+    bottom: 0;
+}
+
+
+@media (max-width: 720px){
+    .profile__controller-user{
+        justify-content: start;
+        padding: 10px;
+    }
+    .form-item{
+        display:block;
+    }
 }
