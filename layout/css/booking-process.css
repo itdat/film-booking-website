@@ -348,3 +348,21 @@ table th {
 .ticket-info-container {
   width: 300px;
 }
+
+.combo-controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .combo-controller {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .combo-controller {
+    flex-direction: row;
+  }
+}
