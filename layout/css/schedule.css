@@ -1,0 +1,25 @@
+.schedule-days {
+  overflow-x: auto;
+}
+
+.schedule-content {
+  height: 500px;
+  overflow-y: auto;
+}
+
+ul.cinema-list li {
+  padding: 1rem;
+  border: 1px solid var(--light-1-color);
+  opacity: 0.5;
+}
+
+ul.cinema-list li:hover {
+  background: var(--light-1-color);
+  opacity: 1;
+  transition-duration: 500ms;
+}
+
+ul.cinema-list li img {
+  width: 50px;
+  margin-right: 1rem;
+}
