@@ -6,57 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ad169e7bc.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="./css/detail.css">
+    <link rel="stylesheet" href="./css/homepage.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="root">
-            <div class="backgound" style="background-image: url(./images/poster_ready_player_one.jpeg);">
-                <div class="row">
-                    <div class="col-md-4 poster">
-                        <img class="img-fluid" src="./images/Đấu_trường_ảo_2018.jpg" alt="poster">
+    <div class="background p-3 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="poster">
+                        <button class="trailer" data-toggle="modal" data-target="#trailer">
+                            <img src="./images/play-video.png" alt="">
+                        </button>
                     </div>
-                    <div class="col-md-4  ">
-                        <div class="detail_in_poster text-center">
-                            <p>11-04-2018</p>
-                            <h3 class="name">READY PLAYER ONE</h3>
-                            <div class="inline-block">
-                                <span>120 phút</span>
-                                - <span>10.0 IMDb</span>
-                                - <span>2D-3D</span>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn">DAT VE</button>
-                                <button class="btn" data-toggle="modal" data-target="#trailer">XEM TRAILER</button>
-                            </div>
-                        </div>
 
+    
+                </div>
+                <div class="col-md-8 d-flex justify-content-center align-items-center text-center mt-3">
+                    <div class="detail_in_poster align-items-center">
+                        <p>11-04-2018</p>
+                        <div class="h1"><span class="mb-0 align-middle badge badge-primary mr-1">C16</span><span class="align-middle">READY PLAYER ONE</span></div>
+                        <div class="inline-block">
+                            <span>120 phút</span>
+                            - <span>10.0 IMDb</span>
+                            - <span>2D-3D</span>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary mt-3">ĐẶT VÉ NGAY</button>
+    
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="infomation">
-                <div class="row">
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <div class="home-title">
+                <a class="active">LỊCH CHIẾU</a>
+                <a>THÔNG TIN</a>
+                <a>ĐÁNH GIÁ</a>
+            </div>
+            <div class="infomation rounded">
+                <div class="row p-3">
                     <div class="col-md-6">
-                        <ul class="list-group">
-                            <li class="list-group-item"><span class="capitalize">Trạng thái: </span>Còn vé</li>
-                            <li class="list-group-item"><span class="capitalize">Điểm IMDb: </span><span
-                                    class="IMDb">10.0</span></li>
-                            <li class="list-group-item"><span class="capitalize">Ngày phát hành: </span>1/1/2020</li>
-                            <li class="list-group-item"><span class="capitalize">Đạo diễn: </span>VMH</li>
-                            <li class="list-group-item"><span class="capitalize">Thể loại: </span>Cyberpunk</li>
-                            <li class="list-group-item"><span class="capitalize">Định dạng: </span>2D,3D</li>
-                            <li class="list-group-item"><span class="capitalize">Quốc gia sản xuất: </span>Mỹ</li>
-                        </ul>
+                        <div class="row information__item">
+                            <p class="information__title">Trạng thái: </p>
+                            <p>Còn vé</p>
+                        </div>
+                        <div class="row information__item">
+                            <p class="information__title">Điểm IMDb: </p>
+                            <p>10.0</p>
+                        </div>
+                        <div class="row information__item">
+                            <p class="information__title">Ngày phát hành: </p>
+                            <p  >11/04/2020</p>
+                        </div>
+                        <div class="row information__item">
+                            <p class="information__title">Thời lượng: </p>
+                            <p>120 phút</p>
+                        </div>
+                        <div class="row information__item">
+                            <p class="information__title">Thể loại: </p>
+                            <p>Hành động</p>
+                        </div>
+
+                        <div class="row information__item">
+                            <p class="information__title">Định dạng: </p>
+                            <p>2D/3D</p>
+                        </div>
+                        <div class="row information__item">
+                            <p class="information__title">Đạo diễn: </p>
+                            <p>VMH</p>
+                        </div>
+                        <div class="row information__item">
+                            <p class="information__title">Quốc gia SX: </p>
+                            <p>Mỹ</p>
+                        </div>
                     </div>
-                    <div class="col-md-5">
-                        <p>Nội dung: </p>
-                        <p>Ready Player One xoay quanh cuộc phiêu lưu của Wade Watts (do Tye Sheridan thủ vai). Phim lấy
-                            bối cảnh tại Columbus, Ohio năm 2045. Thế giới thực mà Wade đang sống là một nơi có sự phân
-                            hóa giàu nghèo rõ ràng. Chính vì vậy, hầu hết tất cả người dân sống tại đó, bao gồm cả Wade,
-                            đều hòa mình vào thế giới ảo mang tên OASIS.</p>
+                    <div class="col-md-6 justify-content-start px-0">
+                        <div class="information__item">
+                            <p class="information__title">Nội dung:</p>
+                            <p class="text-justify">
+                                Dựa trên bộ truyện tranh bán chạy nhất, nam diễn viên Vin Diesel đảm nhận vai Ray
+                                Garrison, một người lính không may bị giết trong lúc ra trận và trở lại với vai trò là
+                                siêu anh hùng Bloodshot của tập đoàn RST. Với một đội quân công nghệ nano trong huyết
+                                quản, anh ta là một lực lượng không thể ngăn cản, mạnh mẽ hơn bao giờ hết và có thể chữa
+                                lành ngay lập tức. Nhưng trong việc kiểm soát cơ thể của mình, công ty cũng đã thay đổi
+                                cả tâm trí và ký ức của anh ấy.
+
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,11 +113,13 @@
         </div>
         <!-- Button trigger modal -->
         <!-- Modal -->
-        <div class="modal fade" id="trailer" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="trailer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
-                    <video src="https://www.youtube.com/watch?v=cSp1dM2Vj48&t=41s"></video>
+                    <iframe width="813" height="457" src=" https://www.youtube.com/embed/cSp1dM2Vj48" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -83,6 +134,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+        
 </body>
 
 </html>
