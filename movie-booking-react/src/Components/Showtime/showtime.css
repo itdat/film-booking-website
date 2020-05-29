@@ -1,0 +1,149 @@
+.showtime .showtime-detail {
+    background-color: var(--light-2-color);
+    padding: 20px 20xpx;
+    border-radius: 5px;
+  }
+  
+  .showtime__movie-theater {
+    width: 30%;
+  }
+  .showtime__movie-date {
+    border-right: 1px solid #e8e3e3;
+    border-left: 1px solid #e8e3e3;
+    width: 10%;
+  }
+  .showtime__movie-time {
+    padding: 0.6125rem 1.875rem;
+  }
+  .movie-time__item-detail p {
+    margin-bottom: 0;
+  }
+  
+  .movie-time__item-detail p:nth-child(1) {
+    font-size: 1.2rem;
+  }
+  .movie-time__item-detail p:nth-child(1) span {
+    display: inline-block;
+    height: 1.875rem;
+    width: 1.875rem;
+    line-height: 1.875rem;
+    background-color: var(--primary-color);
+    color: var(--light-1-color);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+  }
+  
+  .movie-time__item-detail p:nth-child(2) span {
+    display: inline-block;
+    height: 1.875rem;
+    width: 1.875rem;
+    line-height: 1.875rem;
+    background-color: var(--primary-color);
+    color: var(--light-1-color);
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 5px;
+  }
+  
+  .movie-time__item-detail p:nth-child(3) span {
+    display: inline-block;
+    margin-right: 0.625rem;
+    margin-bottom: 0.625rem;
+    border: 1px solid var(--dark-4-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  .movie-time__item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .movie-time__item img {
+    width: 125px;
+    height: auto;
+    object-fit: fill;
+  }
+  .movie-time__item-detail {
+    color: var(--dark-1-color);
+    letter-spacing: 1px;
+    padding-left: 30px;
+  }
+  
+  .showtime_title {
+    font-size: 1.6rem;
+  }
+  .cinema-controller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .showtime__movie-theater {
+    height: 100%;
+  }
+  
+  
+  .movie-theater__item {
+    color: var(--dark-1-color);
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    position: relative;
+  }
+  .movie-theater__item::after {
+    position: absolute;
+    content: "";
+  }
+  .movie-theater__item img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .movie-theater__detail {
+    margin-left: 15px;
+  }
+  
+  .movie-theater__name {
+    color: var(--primary-color);
+  }
+  
+  .movie-theater__name span {
+    color: var(--dark-1-color);
+  }
+  .movie-theater__detail p {
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+  
+  .movie-theater__address {
+    color: #a8a8a8;
+  }
+  .movie-theater__deatil a:hover {
+    color: var(--primary-color);
+  }
+  
+  .movie-date__item {
+    padding: 5px 10px;
+    position: relative;
+  }
+  .movie-date__item::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    background-color: #a8a8a8;
+  }
+  .movie-date__item:focus p {
+    color: var(--primary-color);
+  }
+  .movie-date__item p {
+    color: var(--dark-1-color);
+    text-align: center;
+    margin-bottom: 0;
+  }

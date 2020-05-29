@@ -1,0 +1,55 @@
+import React, { Component } from "react";
+import "./movieItem.css";
+export default class MovieItem extends Component {
+  render() {
+    let movie = this.props.movie;
+
+    let rating = [];
+    if (movie.danhGia > 5) movie.danhGia = 5;
+    for (let i = 0; i < movie.danhGia; i++) {
+      rating.push(<i className="fa fa-star" />);
+    }
+
+    return (
+      <div className="col-6 col-sm-4 col-md-4 col-lg-3 myCol">
+        <div className="type-movie__item">
+          <div className="filmThumbnail">
+            <img
+              src={movie.hinhAnh}
+              height="355px"
+              width="100%  "
+              alt="movie img"
+            />
+            <div className="movieItemOverlay" />
+            <div className="movie__detail">
+              <i className="fa fa-play d-block faPlay" />
+            </div>
+            <div className="movie__item-type">
+              <p>C13</p>
+            </div>
+            <div className="booking-button">
+              <button className="myButton movieItem__button">
+                XEM CHI TIẾT
+              </button>
+              <button className="myButton movieItem__button mr-2">
+                MUA VÉ
+                <i className="fa fa-film" />
+              </button>
+            </div>
+          </div>
+          <div className="type-movie__item-info mt-2">
+            <div className="movie__item-infoTitle">
+              <p>{movie.tenPhim} (C18)</p>
+            </div>
+            <div className="movie__item-infoTime">
+              <p className="mr-3">110 phút</p>
+              <p className="movie__item-rating">
+                {rating}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}

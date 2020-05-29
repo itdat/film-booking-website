@@ -1,0 +1,125 @@
+.filmThumbnail {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.filmThumbnail img {
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.movieItemOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, black 5%, transparent);
+  opacity: 0;
+  transition: all 0.8s;
+}
+.filmThumbnail .movie__detail .faPlay {
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  border: 1.5px solid var(--light-1-color);
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+.movie__detail {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.filmThumbnail:hover .movie__detail,
+.filmThumbnail:hover .movieItemOverlay {
+  opacity: 1;
+}
+
+.movie__item-infoTime {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.8125rem;
+}
+.movie__item-infoTime p:nth-child(1) {
+  color: var(--light-3-color);
+}
+
+.movie__item-infoTime .movie__item-rating {
+  color: var(--primary-color);
+}
+
+.filmThumbnail .movie__item-type {
+  position: absolute;
+  text-align: center;
+  color: var(--light-1-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  top: 5%;
+  left: 5%;
+  height: 25px;
+  width: 45px;
+  font-size: 0.8125rem;
+  line-height: 25px;
+}
+
+.filmThumbnail .movie__item-rating {
+  position: absolute;
+  text-align: center;
+  background-color: var(--dark-3-color);
+  border-radius: 5px;
+  opacity: 0.8;
+  height: 15%;
+  width: 50px;
+  color: var(--light-2-color);
+  top: 5%;
+  right: 5%;
+  border: 1px solid var(--dark-2-color);
+}
+
+.filmThumbnail .booking-button {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  font-size: 0.8rem;
+  bottom: -100%;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filmThumbnail:hover .booking-button {
+  bottom: 0;
+  z-index: 1;
+}
+
+.filmThumbnail .movieItem__button {
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  font-size: 0.7rem;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .filmThumbnail .movieItem__button {
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 0 auto;
+    opacity: 1;
+    font-size: 0.7rem;
+  }
+}

@@ -1,38 +1,359 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #fc6601;
+  --dark-1-color: #1d1b1c;
+  --dark-2-color: #212121;
+  --dark-3-color: #343434;
+  --dark-4-color: #444444;
+  --light-1-color: #f4f4f4;
+  --light-2-color: #ffffff;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --info-color: #3b599a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem !important;
+  line-height: 1.6;
+  background-color: var(--dark-1-color);
+  color: var(--light-1-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--light-2-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-dark-1 {
+  color: var(--dark-1-color) !important;
+}
+
+.text-dark-2 {
+  color: var(--dark-2-color) !important;
+}
+
+.text-dark-3 {
+  color: var(--dark-3-color) !important;
+}
+
+.text-light-1 {
+  color: var(--light-1-color) !important;
+}
+
+.text-light-2 {
+  color: var(--light-2-color) !important;
+}
+
+.text-success {
+  color: var(--success-color) !important;
+}
+
+.text-info {
+  color: var(--info-color) !important;
+}
+
+.text-danger {
+  color: var(--danger-color) !important;
+}
+
+.btn-primary,
+.bg-primary,
+.badge-primary,
+.alert-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-light-1,
+.bg-light-1,
+.badge-light-1,
+.alert-light-1 {
+  background: var(--light-1-color);
+  color: #333;
+}
+
+.btn-light-2,
+.bg-light-2,
+.badge-light-2,
+.alert-light-2 {
+  background: var(--light-2-color);
+  color: #333;
+}
+
+.btn-dark-1,
+.bg-dark-1,
+.badge-dark-1,
+.alert-dark-1 {
+  background: var(--dark-1-color);
+  color: #fff;
+}
+
+.btn-dark-2,
+.bg-dark-2,
+.badge-dark-2,
+.alert-dark-2 {
+  background: var(--dark-2-color);
+  color: #fff;
+}
+
+.btn-dark-3,
+.bg-dark-3,
+.badge-dark-3,
+.alert-dark-3 {
+  background: var(--dark-3-color);
+  color: #fff;
+}
+
+.btn-dark-4,
+.bg-dark-4,
+.badge-dark-4,
+.alert-dark-4 {
+  background: var(--dark-4-color);
+  color: #fff;
+}
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+.btn-success,
+.bg-success,
+.badge-success,
+.alert-success {
+  background: var(--success-color);
+  color: #fff;
+}
+
+.btn-info,
+.bg-info,
+.badge-info,
+.alert-info {
+  background: var(--info-color);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-color) !important;
+}
+
+.btn-dark-1:hover {
+  background: var(--dark-1-color) !important;
+}
+
+.btn-dark-2:hover {
+  background: var(--dark-2-color) !important;
+}
+
+.btn-dark-3:hover {
+  background: var(--dark-3-color) !important;
+}
+
+.btn-dark-4:hover {
+  background: var(--dark-4-color) !important;
+}
+
+.btn-light-1:hover {
+  background: var(--light-1-color) !important;
+}
+
+.btn-light-2:hover {
+  background: var(--light-2-color) !important;
+}
+
+.btn-danger:hover {
+  background: var(--danger-color) !important;
+}
+
+.btn-success:hover {
+  background: var(--success-color) !important;
+}
+
+.btn-info:hover {
+  background: var(--info-color) !important;
+}
+
+.btn:hover {
+  opacity: 0.8 !important;
+}
+
+.btn {
+  border: none !important;
+}
+
+.bg-light,
+.badge-light {
+  border: #ccc solid 1px;
+}
+
+.round-img {
+  border-radius: 50%;
+}
+
+textarea:focus,
+input:focus {
+  outline: none !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+.border-dark-1 {
+  border-color: var(--dark-1-color) !important;
+}
+
+.border-dark-2 {
+  border-color: var(--dark-2-color) !important;
+}
+
+.border-dark-3 {
+  border-color: var(--dark-3-color) !important;
+}
+
+.border-dark-4 {
+  border-color: var(--dark-4-color) !important;
+}
+
+.border-light-1 {
+  border-color: var(--light-1-color) !important;
+}
+
+.border-light-2 {
+  border-color: var(--light-2-color) !important;
+}
+
+.border-success {
+  border-color: var(--success-color) !important;
+}
+
+.border-danger {
+  border-color: var(--danger-color) !important;
+}
+
+.border-info {
+  border-color: var(--info-color) !important;
+}
+
+th,
+td {
+  vertical-align: middle !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.scroll-area::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.scroll-area::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+.table-dark {
+  background: var(--dark-4-color);
+  color: #fff;
+}
+
+.table-dark td,
+.table-dark th,
+.table-dark thead th {
+  border-color: var(--dark-3-color) !important;
+}
+
+
+
+.myButton {
+  color: var(--light-1-color);
+  background-color: var(--primary-color);
+  border-radius: 18px;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.myCol {
+  padding: 5px 7.5px !important;
+}
+.padding-col{
+  padding: 5px 7.5px!important;
+}
+.home-title {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 30px;
+  padding-bottom: 15px;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.home-title a {
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-title a::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: var(--primary-color);
+  left: 0;
+  bottom: 0;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.home-title a:hover::after {
+  width: 100%;
+}
+.home-title a.active {
+  color: var(--primary-color);
 }
