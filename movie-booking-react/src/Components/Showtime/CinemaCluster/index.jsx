@@ -6,13 +6,6 @@ import { CINEMA_CHOOSEN } from "../../../Redux/Action/type";
 import { createAction } from "../../../Redux/Action";
 
 class CinemaCluster extends Component {
-  // componentDidMount() {
-  //     axios({
-  //         method:'GET',
-  //         url:''
-  //     })
-  // }
-
   handleCinemaChoosen = (maHeThongRap) => {
       this.props.dispatch(createAction(CINEMA_CHOOSEN,maHeThongRap))
   };

@@ -2,16 +2,25 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./showtime.css";
 import CinemaCluster from "./CinemaCluster";
-import { fetchCinemaClusters } from "../../Redux/Action/user";
+import Cinema from './Cinema'
+import { fetchCinemaClusters, fetchCinemas } from "../../Redux/Action/user";
 class Showtime extends Component {
   componentDidMount() {
+    this.props.dispatch(fetchCinemas(this.props.cinemaType));
     this.props.dispatch(fetchCinemaClusters());
   }
 
   render() {
+    //Danh sách các hệ thống rạp
     let cinemaLogos = this.props.cinemaClusters.map((item, index) => {
       return <CinemaCluster cinemaCluster={item} key={index} />;
     });
+
+    //Danh sách các rạp của hệ thống rạp được chọn
+    let cinemaList = this.props.cinemas.map((item, index) => {
+      return <Cinema cinema={item} key={index} cinemaName={this.props.cinemaType}/>;
+    });
+
     return (
       <section className="showtime container">
         {/* Showtime title */}
@@ -27,38 +36,7 @@ class Showtime extends Component {
         {/* Showtime detail */}
         <div className="showtime-detail d-flex">
           <div className="showtime__movie-theater">
-            <div className="movie-theater__item">
-              <div className="movie-theater__item-logo">
-                <img src="./images/cgv-1.jpg" alt="cgv1" />
-              </div>
-              <div className="movie-theater__detail">
-                <p className="movie-theater__name">
-                  CGV<span className="ml-2">- Sense City</span>
-                </p>
-                <p className="movie-theater__address">Lầu 3 Sense city...</p>
-                <a href="#">[chi tiết]</a>
-              </div>
-            </div>
-            <div className="movie-theater__item">
-              <img src="./images/cgv-1.jpg" alt="cgv1" />
-              <div className="movie-theater__detail">
-                <p className="movie-theater__name">
-                  CGV<span className="ml-2">- Sense City</span>
-                </p>
-                <p className="movie-theater__address">Lầu 3 Sense city...</p>
-                <a href="#">[chi tiết]</a>
-              </div>
-            </div>
-            <div className="movie-theater__item">
-              <img src="./images/cgv-1.jpg" alt="cgv1" />
-              <div className="movie-theater__detail">
-                <p className="movie-theater__name">
-                  CGV<span className="ml-2">- Sense City</span>
-                </p>
-                <p className="movie-theater__address">Lầu 3 Sense city...</p>
-                <a href="#">[chi tiết]</a>
-              </div>
-            </div>
+            {cinemaList}
           </div>
           <div className="showtime__movie-date">
             <div className="movie-date__item">
@@ -163,6 +141,13 @@ class Showtime extends Component {
 const mapStateToProps = (state) => {
   return {
     cinemaClusters: state.cinema.cinemaClusters,
+    cinemaType: state.cinema.cinemaChoosen,
+    cinemas: state.cinema.cinemas || [{
+      maCumRap:"",
+      tenCumRap:"",
+      diaChi:"",
+      danhSachRap:[]
+    }]
   };
 };
 

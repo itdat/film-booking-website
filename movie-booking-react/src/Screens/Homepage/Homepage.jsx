@@ -12,12 +12,10 @@ export default class Homepage extends Component {
     render() {
         return (
             <Fragment>
-                <Header/>
                 <MyCarousel/>
                 <MovieList/>
                 <Showtime/>
                 <News/>
-                <Footer/>
             </Fragment>
         )
     }

@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import './header.css'
+import {Link} from 'react-router-dom';
 export default class Header extends Component {
   render() {
     return (
       <header className="container-fuild" id="header">
         <nav className="navbar navbar-expand-md">
           {/* Header logo */}
-          <a href="#" className="navbar-brand">
+          <Link to="/" className="navbar-brand">
             <img src="./images/logo-dark-mode.png" alt="logo-web" />
-          </a>
+          </Link>
           {/* End Header logo */}
           {/* Header button toggler */}
           <button
@@ -24,9 +25,9 @@ export default class Header extends Component {
           <div className="collapse navbar-collapse" id="myNavbar">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="/" className="nav-link">
                   Lịch chiếu
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a href="#" className="nav-link">

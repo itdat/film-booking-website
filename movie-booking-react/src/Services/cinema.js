@@ -8,6 +8,15 @@ class CinemaServices {
         "http://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinHeThongRap",
     });
   }
+
+  // Lấy danh sách rạp theo hệ thống rạp
+  getCinemas(cinemaType){
+    return axios({
+      method:'GET',
+      url:`http://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinCumRapTheoHeThong?maHeThongRap=${cinemaType}
+      `
+    })
+  }
 }
 
 export default CinemaServices;
