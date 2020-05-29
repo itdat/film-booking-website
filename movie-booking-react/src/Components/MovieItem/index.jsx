@@ -16,9 +16,7 @@ export default class MovieItem extends Component {
           <div className="filmThumbnail">
             <img
               src={movie.hinhAnh}
-              height="355px"
-              width="100%  "
-              alt="movie img"
+              alt={movie.biDanh}
             />
             <div className="movieItemOverlay" />
             <div className="movie__detail">
@@ -31,7 +29,7 @@ export default class MovieItem extends Component {
               <button className="myButton movieItem__button">
                 XEM CHI TIẾT
               </button>
-              <button className="myButton movieItem__button mr-2">
+              <button className="myButton movieItem__button">
                 MUA VÉ
                 <i className="fa fa-film" />
               </button>
