@@ -17,6 +17,13 @@ class CinemaServices {
       `
     })
   }
+
+  getMovieSchedule(cinemaType){
+    return axios({
+      method:'GET',
+      url:`http://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=${cinemaType}&maNhom=GP01`
+    })
+  }
 }
 
 export default CinemaServices;

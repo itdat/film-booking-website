@@ -3,6 +3,7 @@ import {
   FETCH_CINEMA_CLUSTERS,
   FETCH_MOVIE_DETAIL,
   FETCH_CINEMAS,
+  FETCH_MOVIE_SCHEDULES,
 } from "./type";
 import { createAction } from ".";
 import { movieServices, cinemaServices } from "../../Services";
@@ -53,6 +54,19 @@ export const fetchCinemas = (cinemaType) => {
       .getCinemas(cinemaType)
       .then((response) => {
         dispatch(createAction(FETCH_CINEMAS, response.data));
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+};
+
+export const fetchMovieSchedule = (cinemaType) => {
+  return (dispatch) => {
+    cinemaServices
+      .getMovieSchedule(cinemaType)
+      .then((response) => {
+        dispatch(createAction(FETCH_MOVIE_SCHEDULES, response.data));
       })
       .catch((error) => {
         alert(error.message);

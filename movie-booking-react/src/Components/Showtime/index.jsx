@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./showtime.css";
 import CinemaCluster from "./CinemaCluster";
-import Cinema from './Cinema'
-import { fetchCinemaClusters, fetchCinemas } from "../../Redux/Action/user";
+import Cinema from "./Cinema";
+import {fetchCinemas ,fetchMovieSchedule} from "../../Redux/Action/user";
 class Showtime extends Component {
-  componentDidMount() {
-    this.props.dispatch(fetchCinemas(this.props.cinemaType));
-    this.props.dispatch(fetchCinemaClusters());
+  // Cập nhật: danh sách các rạp trong cụm rạp dựa vào props: cinemaType
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.cinemaType !== this.props.cinemaType) {
+      this.props.dispatch(fetchCinemas(nextProps.cinemaType));
+      this.props.dispatch(fetchMovieSchedule(nextProps.cinemaType));
+    }
+    return true;
   }
 
   render() {
@@ -18,7 +22,9 @@ class Showtime extends Component {
 
     //Danh sách các rạp của hệ thống rạp được chọn
     let cinemaList = this.props.cinemas.map((item, index) => {
-      return <Cinema cinema={item} key={index} cinemaName={this.props.cinemaType}/>;
+      return (
+        <Cinema cinema={item} key={index} cinemaName={this.props.cinemaType} />
+      );
     });
 
     return (
@@ -35,9 +41,7 @@ class Showtime extends Component {
 
         {/* Showtime detail */}
         <div className="showtime-detail d-flex">
-          <div className="showtime__movie-theater">
-            {cinemaList}
-          </div>
+          <div className="showtime__movie-theater">{cinemaList}</div>
           <div className="showtime__movie-date">
             <div className="movie-date__item">
               <p>Thứ 2</p>
@@ -142,12 +146,14 @@ const mapStateToProps = (state) => {
   return {
     cinemaClusters: state.cinema.cinemaClusters,
     cinemaType: state.cinema.cinemaChoosen,
-    cinemas: state.cinema.cinemas || [{
-      maCumRap:"",
-      tenCumRap:"",
-      diaChi:"",
-      danhSachRap:[]
-    }]
+    cinemas: state.cinema.cinemas || [
+      {
+        maCumRap: "",
+        tenCumRap: "",
+        diaChi: "",
+        danhSachRap: [],
+      },
+    ],
   };
 };
 
