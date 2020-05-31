@@ -1,0 +1,55 @@
+.movie-time__item-detail p {
+    margin-bottom: 0;
+  }
+  
+  .movie-time__item-detail p:nth-child(1) {
+    font-size: 1.2rem;
+  }
+  .movie-time__item-detail p:nth-child(1) span {
+    display: inline-block;
+    height: 1.875rem;
+    width: 1.875rem;
+    line-height: 1.875rem;
+    background-color: var(--primary-color);
+    color: var(--light-1-color);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+  }
+  
+  .movie-time__item-detail p:nth-child(2) span {
+    display: inline-block;
+    height: 1.875rem;
+    width: 1.875rem;
+    line-height: 1.875rem;
+    background-color: var(--primary-color);
+    color: var(--light-1-color);
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 5px;
+  }
+  
+  .movie-time__item-detail p:nth-child(3) span {
+    display: inline-block;
+    margin-right: 0.625rem;
+    margin-bottom: 0.625rem;
+    border: 1px solid var(--dark-4-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  .movie-time__item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .movie-time__item img {
+    width: 125px;
+    height: auto;
+    object-fit: fill;
+  }
+  .movie-time__item-detail {
+    color: var(--dark-1-color);
+    letter-spacing: 1px;
+    padding-left: 30px;
+  }

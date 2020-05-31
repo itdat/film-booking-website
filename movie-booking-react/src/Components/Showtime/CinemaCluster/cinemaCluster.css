@@ -1,7 +1,8 @@
 .cinema-controller__item {
   position: relative;
+  transition: all 0.8s;
 }
-.cinema-controller__item::after {
+.cinema-controller__item:hover::after {
   position: absolute;
   content: "";
   bottom: -21px;

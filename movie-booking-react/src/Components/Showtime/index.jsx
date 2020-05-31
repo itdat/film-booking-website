@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import "./showtime.css";
 import CinemaCluster from "./CinemaCluster";
 import Cinema from "./Cinema";
-import {fetchCinemas ,fetchMovieSchedule} from "../../Redux/Action/user";
+import { fetchCinemas, fetchMovieSchedule } from "../../Redux/Action/user";
+import MovieSchedule from "./MovieSchedule";
 class Showtime extends Component {
   // Cập nhật: danh sách các rạp trong cụm rạp dựa vào props: cinemaType
   shouldComponentUpdate(nextProps, nextState) {
@@ -26,6 +27,13 @@ class Showtime extends Component {
         <Cinema cinema={item} key={index} cinemaName={this.props.cinemaType} />
       );
     });
+
+    //Danh sách phim theo rạp
+    let movieShowtime=this.props.movieShowtime.map((item,index)=>{
+      return (
+        <MovieSchedule movieSchedule={item} key={index}/>
+      )
+    })
 
     return (
       <section className="showtime container">
@@ -57,83 +65,7 @@ class Showtime extends Component {
             </div>
           </div>
           <div className="showtime__movie-time">
-            <div className="movie-time__item">
-              <img
-                src="./images/hiem-hoa-rung-chet-jungle-15095199102590.jpg"
-                alt
-              />
-              <div className="movie-time__item-detail">
-                <p className="movie-time-title">
-                  Thảm họa rừng chết
-                  <span>C13</span>
-                </p>
-                <p className="mb-4 mt-2">
-                  <span className="mr-3">2D</span>Phụ đề
-                </p>
-                <p>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                </p>
-              </div>
-            </div>
-            <div className="movie-time__item">
-              <img src="./images/ke-san-lung-so-hai.jpg" alt />
-              <div className="movie-time__item-detail">
-                <p className="movie-time-title">
-                  Kẻ săn lùng sợ hãi
-                  <span>C18</span>
-                </p>
-                <p className="mb-4 mt-2">
-                  <span className="mr-3">2D</span>Phụ đề
-                </p>
-                <p>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                </p>
-              </div>
-            </div>
-            <div className="movie-time__item">
-              <img src="./images/ke-san-lung-so-hai.jpg" alt />
-              <div className="movie-time__item-detail">
-                <p className="movie-time-title">
-                  Kẻ săn lùng sợ hãi
-                  <span>C18</span>
-                </p>
-                <p className="mb-4 mt-2">
-                  <span className="mr-3">2D</span>Phụ đề
-                </p>
-                <p>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                </p>
-              </div>
-            </div>
-            <div className="movie-time__item">
-              <img src="./images/ke-san-lung-so-hai.jpg" alt />
-              <div className="movie-time__item-detail">
-                <p className="movie-time-title">
-                  Kẻ săn lùng sợ hãi
-                  <span>C18</span>
-                </p>
-                <p className="mb-4 mt-2">
-                  <span className="mr-3">2D</span>Phụ đề
-                </p>
-                <p>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                  <span>12:30</span>
-                </p>
-              </div>
-            </div>
+            {movieShowtime}
           </div>
         </div>
         {/* End shwotime detail */}
@@ -154,6 +86,7 @@ const mapStateToProps = (state) => {
         danhSachRap: [],
       },
     ],
+    movieShowtime: state.movieSchedule.movieListByCinema,
   };
 };
 

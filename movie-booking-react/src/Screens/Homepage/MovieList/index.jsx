@@ -35,10 +35,6 @@ class MovieList extends Component {
       </section>
     );
   }
-
-  componentDidMount() {
-    this.props.dispatch(fetchMovies())
-  }
 }
 
 const mapStateToProps = (state) => {

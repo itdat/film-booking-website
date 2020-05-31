@@ -13,7 +13,7 @@ class CinemaCluster extends Component {
   render() {
     let cinemaCluster = this.props.cinemaCluster;
     return (
-      <div className="cinema-controller__item">
+      <div className="cinema-controller__item active">
         <img
           src={cinemaCluster.logo}
           alt={cinemaCluster.tenHeThongRap}

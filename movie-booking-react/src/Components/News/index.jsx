@@ -16,7 +16,7 @@ export default class News extends Component {
                   <div href="#" className="news-item__img">
                     <img
                       src="./images/coco-nguon-cam-hung-mexico-bat-tan-chay-tran-trong-tac-pham-15112415262155.jpg"
-                      alt
+                      alt="hinhAnh"
                     />
                     <div className="movieItemOverlay" />
                   </div>
@@ -36,7 +36,7 @@ export default class News extends Component {
                   <div href="#" className="news-item__img">
                     <img
                       src="./images/diem-mat-dan-sao-dinh-dam-trong-bom-tan-lien-minh-cong-ly-15106519084263.jpg"
-                      alt
+                      alt="hinhAnh"
                     />
                     <div className="movieItemOverlay" />
                   </div>
@@ -57,7 +57,7 @@ export default class News extends Component {
                 <div href="#" className="news-item__img">
                   <img
                     src="./images/nhom-losers-club-lon-dang-dan-dan-lo-dien-trong-sieu-pham-it-chapter-two-15265444875493.jpg"
-                    alt
+                    alt="hinhAnh"
                   />
                   <div className="movieItemOverlay" />
                 </div>
@@ -77,7 +77,7 @@ export default class News extends Component {
                 <div href="#" className="news-item__img">
                   <img
                     src="./images/coco-nguon-cam-hung-mexico-bat-tan-chay-tran-trong-tac-pham-15112415262155.jpg"
-                    alt
+                    alt="hinhAnh"
                   />
                   <div className="movieItemOverlay" />
                 </div>
@@ -97,7 +97,7 @@ export default class News extends Component {
                 <div href="#" className="news-item__img">
                   <img
                     src="./images/coco-nguon-cam-hung-mexico-bat-tan-chay-tran-trong-tac-pham-15112415262155.jpg"
-                    alt
+                    alt="hinhAnh"
                   />
                   <div className="movieItemOverlay" />
                 </div>

@@ -91,6 +91,11 @@
     align-items: flex-start;
     padding: 10px;
     position: relative;
+    cursor: pointer;
+    transition: all .5s;
+  }
+  .movie-theater__item:hover{
+    background-color: #f0eaea;
   }
   .movie-theater__item::after {
     position: absolute;
