@@ -8,7 +8,7 @@ export default class Header extends Component {
         <nav className="navbar navbar-expand-md">
           {/* Header logo */}
           <Link to="/" className="navbar-brand">
-            <img src="./images/logo-dark-mode.png" alt="logo-web" />
+            <img src="/images/logo-dark-mode.png" alt="logo-web" />
           </Link>
           {/* End Header logo */}
           {/* Header button toggler */}

@@ -16,7 +16,8 @@ const movieScheduleReducer = (state = initialState, action) => {
       let index = movieList.findIndex(
         (item) => item.maCumRap === action.payload
       );
-      movieListByCinemaUpdated = movieList[index].danhSachPhim;
+      if (index !== -1)
+        movieListByCinemaUpdated = movieList[index].danhSachPhim;
       state.cinemaID = action.payload;
       state.movieListByCinema = movieListByCinemaUpdated;
       return { ...state };

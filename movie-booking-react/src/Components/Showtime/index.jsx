@@ -14,11 +14,13 @@ class Showtime extends Component {
     }
     return true;
   }
-
   render() {
     //Danh sách các hệ thống rạp
     let cinemaLogos = this.props.cinemaClusters.map((item, index) => {
-      return <CinemaCluster cinemaCluster={item} key={index} />;
+      if(item.maHeThongRap===this.props.cinemaType)
+        return <CinemaCluster cinemaCluster={item} key={index} active="cinema-controller__item-active"/>;
+      else
+        return <CinemaCluster cinemaCluster={item} key={index} active=""/>;
     });
 
     //Danh sách các rạp của hệ thống rạp được chọn
@@ -27,13 +29,6 @@ class Showtime extends Component {
         <Cinema cinema={item} key={index} cinemaName={this.props.cinemaType} />
       );
     });
-
-    //Danh sách phim theo rạp
-    let movieShowtime=this.props.movieShowtime.map((item,index)=>{
-      return (
-        <MovieSchedule movieSchedule={item} key={index}/>
-      )
-    })
 
     return (
       <section className="showtime container">
@@ -65,7 +60,16 @@ class Showtime extends Component {
             </div>
           </div>
           <div className="showtime__movie-time">
-            {movieShowtime}
+            {(() => {
+              if (this.props.movieShowtime.length === 0)
+                return <p>Rạp chưa có lịch chiếu</p>;
+              else {
+                return this.props.movieShowtime.map((item, index) => {
+                  if(item)
+                  return <MovieSchedule movieSchedule={item} key={index} />;
+                });
+              }
+            })()}
           </div>
         </div>
         {/* End shwotime detail */}

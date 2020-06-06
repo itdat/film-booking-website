@@ -20,7 +20,7 @@ class MovieList extends Component {
     this.state.type === "available"
       ? (movieList = <AvailableMovie />)
       : (movieList = <ComingMovie />);
-
+      console.log("Render MovieList",movieList);
     return (
       <section className="type-movie container">
         <div className="home-title">

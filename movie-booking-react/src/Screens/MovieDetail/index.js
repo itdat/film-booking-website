@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import {fetchDetailMovie} from '../../Redux/Action/user'
 import { connect } from "react-redux";
+import './movieDetail.css'
 class MovieDetail extends Component {
   componentDidMount() {
     this.props.dispatch(fetchDetailMovie(this.props.match.params.movieID));
@@ -20,7 +21,7 @@ class MovieDetail extends Component {
                     data-toggle="modal"
                     data-target="#trailer"
                   >
-                    <img src="./images/play-video.png" alt />
+                    <img src="/images/play-video.png" alt />
                   </button>
                 </div>
               </div>

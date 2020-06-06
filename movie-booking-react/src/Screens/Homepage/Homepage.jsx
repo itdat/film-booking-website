@@ -16,6 +16,7 @@ class Homepage extends Component {
   
 
   render() {
+    console.log("Render homepage");
     return (
       <Fragment>
         <MyCarousel />

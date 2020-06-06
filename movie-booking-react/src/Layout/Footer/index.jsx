@@ -33,66 +33,66 @@ export default function Footer() {
                   <div className="row partner">
                     <div className="partner__item">
                       <a href="#">
-                        <img src="./images/logo-dark-mode.png" alt="footer" />
+                        <img src="/images/logo-dark-mode.png" alt="footer" />
                       </a>
                     </div>
                     <div className="partner__item">
                       <a href="#">
-                        <img src="./images/cgvLogo.png" alt="footer" />
+                        <img src="/images/cgvLogo.png" alt="footer" />
                       </a>
                     </div>
                     <div className="partner__item">
                       <a href="#">
-                        <img src="./images/bhdLogo.png" alt="footer" />
+                        <img src="/images/bhdLogo.png" alt="footer" />
                       </a>
                     </div>
                     <div className="partner__item">
                       <a href="#">
-                        <img src="./images/lottleLogo.png" alt="footer" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="row partner">
-                    <div className="partner__item">
-                      <a href="#">
-                        <img src="./images/footer6.png" alt="footer" />
-                      </a>
-                    </div>
-                    <div className="partner__item">
-                      <a href="#">
-                        <img src="./images/footer4.png" alt="footer" />
-                      </a>
-                    </div>
-                    <div className="partner__item">
-                      <a href="#">
-                        <img src="./images/footer2.png" alt ="footer"/>
-                      </a>
-                    </div>
-                    <div className="partner__item">
-                      <a href="#">
-                        <img src="./images/lottleLogo.png" alt="footer" />
+                        <img src="/images/lottleLogo.png" alt="footer" />
                       </a>
                     </div>
                   </div>
                   <div className="row partner">
                     <div className="partner__item">
                       <a href="#">
-                        <img src="./images/lottleLogo.png" alt ="footer"/>
+                        <img src="/images/footer6.png" alt="footer" />
                       </a>
                     </div>
                     <div className="partner__item">
                       <a href="#">
-                        <img src="./images/foot1.jpg" alt ="footer"/>
+                        <img src="/images/footer4.png" alt="footer" />
                       </a>
                     </div>
                     <div className="partner__item">
                       <a href="#">
-                        <img src="./images/footer4.png" alt ="footer"/>
+                        <img src="/images/footer2.png" alt ="footer"/>
                       </a>
                     </div>
                     <div className="partner__item">
                       <a href="#">
-                        <img src="./images/foot1.jpg" alt="footer" />
+                        <img src="/images/lottleLogo.png" alt="footer" />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="row partner">
+                    <div className="partner__item">
+                      <a href="#">
+                        <img src="/images/lottleLogo.png" alt ="footer"/>
+                      </a>
+                    </div>
+                    <div className="partner__item">
+                      <a href="#">
+                        <img src="/images/foot1.jpg" alt ="footer"/>
+                      </a>
+                    </div>
+                    <div className="partner__item">
+                      <a href="#">
+                        <img src="/images/footer4.png" alt ="footer"/>
+                      </a>
+                    </div>
+                    <div className="partner__item">
+                      <a href="#">
+                        <img src="/images/foot1.jpg" alt="footer" />
                       </a>
                     </div>
                   </div>
@@ -105,22 +105,22 @@ export default function Footer() {
                 <div className="row partner">
                   <div className="contact__item">
                     <a href="#">
-                      <img src="./images/facebook-logo.png" alt ="footer"/>
+                      <img src="/images/facebook-logo.png" alt ="footer"/>
                     </a>
                   </div>
                   <div className="contact__item">
                     <a href="#">
-                      <img src="./images/zalopay_icon.png" alt ="footer"/>
+                      <img src="/images/zalopay_icon.png" alt ="footer"/>
                     </a>
                   </div>
                   <div className="contact__item">
                     <a href="#">
-                      <img src="./images/cybersoft.png" alt="footer" />
+                      <img src="/images/cybersoft.png" alt="footer" />
                     </a>
                   </div>
                   <div className="contact__item">
                     <a href="#">
-                      <img src="./images/lottleLogo.png" alt="footer" />
+                      <img src="/images/lottleLogo.png" alt="footer" />
                     </a>
                   </div>
                 </div>
@@ -143,7 +143,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="row">
             <div className="col-12 col-md-4 ">
-              <img src="./images/zion-logo.jpg" alt="hinhAnh" />
+              <img src="/images/zion-logo.jpg" alt="hinhAnh" />
             </div>
             <div className="col-12 col-md-4 ">
               <p className="footer-bottom-title text-white">
@@ -164,7 +164,7 @@ export default function Footer() {
               </p>
             </div>
             <div className="col-12 col-md-4">
-              <img src="./images/license.png" alt="lisence" />
+              <img src="/images/license.png" alt="lisence" />
             </div>
           </div>
         </div>

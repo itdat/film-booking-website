@@ -2,7 +2,7 @@
   position: relative;
   transition: all 0.8s;
 }
-.cinema-controller__item:hover::after {
+.cinema-controller__item::after {
   position: absolute;
   content: "";
   bottom: -21px;
@@ -13,6 +13,11 @@
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-bottom: 35px solid #fff;
+  display: none;
+}
+
+.cinema-controller__item-active.cinema-controller__item::after {
+  display: block;
 }
 
 .cinema-controller__item img {

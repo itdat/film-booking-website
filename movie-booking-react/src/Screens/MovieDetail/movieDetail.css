@@ -7,7 +7,7 @@
 }
 
 .background::before {
-  background: url(./images/poster_ready_player_one.jpeg);
+  background: url(/images/logo-dark-mode.png);
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;

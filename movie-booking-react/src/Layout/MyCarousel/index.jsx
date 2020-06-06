@@ -22,21 +22,21 @@ export default class MyCarousel extends Component {
             <div className="carousel-item active">
               <img
                 className="d-block w-100"
-                src="./images/slider1.jpg"
+                src="/images/slider1.jpg"
                 alt="First slide"
               />
             </div>
             <div className="carousel-item">
               <img
                 className="d-block w-100"
-                src="./images/slider2.jpg"
+                src="/images/slider2.jpg"
                 alt="Second slide"
               />
             </div>
             <div className="carousel-item">
               <img
                 className="d-block w-100"
-                src="./images/slider3.jpg"
+                src="/images/slider3.jpg"
                 alt="Third slide"
               />
             </div>
