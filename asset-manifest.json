@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/film-booking-website/static/css/main.c59c342a.chunk.css",
+    "main.js": "/film-booking-website/static/js/main.c15f186e.chunk.js",
+    "main.js.map": "/film-booking-website/static/js/main.c15f186e.chunk.js.map",
+    "runtime-main.js": "/film-booking-website/static/js/runtime-main.25409ca9.js",
+    "runtime-main.js.map": "/film-booking-website/static/js/runtime-main.25409ca9.js.map",
+    "static/js/2.99dffcf1.chunk.js": "/film-booking-website/static/js/2.99dffcf1.chunk.js",
+    "static/js/2.99dffcf1.chunk.js.map": "/film-booking-website/static/js/2.99dffcf1.chunk.js.map",
+    "index.html": "/film-booking-website/index.html",
+    "precache-manifest.268e83468c80205bda2a6079c86d65f5.js": "/film-booking-website/precache-manifest.268e83468c80205bda2a6079c86d65f5.js",
+    "service-worker.js": "/film-booking-website/service-worker.js",
+    "static/css/main.c59c342a.chunk.css.map": "/film-booking-website/static/css/main.c59c342a.chunk.css.map",
+    "static/js/2.99dffcf1.chunk.js.LICENSE.txt": "/film-booking-website/static/js/2.99dffcf1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.25409ca9.js",
+    "static/js/2.99dffcf1.chunk.js",
+    "static/css/main.c59c342a.chunk.css",
+    "static/js/main.c15f186e.chunk.js"
+  ]
+}
